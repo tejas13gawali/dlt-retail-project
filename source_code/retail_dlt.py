@@ -1,7 +1,7 @@
 import dlt
 from pyspark.sql.functions import *
 
-config = spark.read.json("/Workspace/Users/tejas13gawali@gmail.com/dlt-retail-project/config/00_config.json", multiLine=True).first().asDict()
+# config = spark.read.json("/Volumes/dlt_retail_catalog/config/config_param/00_config.json", multiLine=True).first().asDict()
 
 @dlt.table(
     name="retail_bronze",
@@ -9,7 +9,7 @@ config = spark.read.json("/Workspace/Users/tejas13gawali@gmail.com/dlt-retail-pr
 )
 def retail_bronze():
 
-    source_path = config["source_path"]
+    source_path = "/Volumes/dlt_retail_catalog/raw_schema/raw_vol/" #config["source_path"]
 
     return (
         spark.readStream
