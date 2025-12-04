@@ -13,14 +13,14 @@ from pyspark.sql.functions import *
 )
 def retail_bronze():
 
-    source_path = "/Volumes/dlt_retail_catalog/raw_schema/raw_vol/" #config["source_path"]
+    # source_path =  config["source_path"]
 
     return (
         spark.readStream
             .format("cloudFiles")
             .option("cloudFiles.format", "csv")
             .option("header", "true")
-            .load(source_path)
+            .load("/Volumes/dlt_retail_catalog/raw_schema/raw_vol/")
             .withColumn("ingestion_timestamp", current_timestamp())
             .withColumn("input_file_name", col("_metadata.file_path"))  # <-- FIXED
     )
