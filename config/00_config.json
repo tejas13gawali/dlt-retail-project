@@ -1,0 +1,7 @@
+{
+  "source_path": "/Volumes/dlt_retail_catalog/raw_schema/raw_vol/",
+  "catalog": "dlt_retail_catalog",
+  "schema": "analytics",
+  "bronze_table": "retail_bronze",
+  "silver_table": "retail_silver"
+}

@@ -1,13 +1,15 @@
 import dlt
 from pyspark.sql.functions import *
 
+config = spark.read.json("/Workspace/Users/tejas13gawali@gmail.com/dlt-retail-project/config/00_config.json", multiLine=True).first().asDict()
+
 @dlt.table(
     name="retail_bronze",
     comment="Bronze table - raw incremental ingestion from UC Volume using Autoloader"
 )
 def retail_bronze():
 
-    source_path = "/Volumes/dlt_retail_catalog/raw_schema/raw_vol/"  # update if needed
+    source_path = config["source_path"]
 
     return (
         spark.readStream
