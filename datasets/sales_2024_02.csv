@@ -1,0 +1,5 @@
+tran_id,tran_date,product_id,product_name,quantity,price,amount,store_id,customer_id
+1101,2024-02-01,P001,Shampoo,3,120,360,S001,C101
+1102,2024-02-02,P003,Conditioner,1,200,200,S004,C107
+1103,2024-02-02,P005,Hair Gel,2,250,500,S002,C102
+1104,2024-02-03,P004,Face Wash,1,180,180,S003,C104

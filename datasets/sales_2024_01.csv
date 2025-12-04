@@ -1,0 +1,7 @@
+tran_id,tran_date,product_id,product_name,quantity,price,amount,store_id,customer_id
+1001,2024-01-05,P001,Shampoo,2,120,240,S001,C101
+1002,2024-01-05,P002,Hair Oil,1,150,150,S001,C102
+1003,2024-01-06,P003,Conditioner,3,200,600,S002,C101
+1004,2024-01-06,P001,Shampoo,1,120,120,S003,C103
+1005,2024-01-07,P004,Face Wash,2,180,360,S001,C104
+1006,2024-01-07,P002,Hair Oil,4,150,600,S002,C106
