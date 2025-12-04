@@ -4,7 +4,7 @@ from pyspark.sql.functions import *
 # config = spark.read.json("/Volumes/dlt_retail_catalog/config/config_param/00_config.json", multiLine=True).first().asDict()
 
 #-------------------------------------------------------------------------
-# Retail Silver
+# Retail bronz
 #-------------------------------------------------------------------------
 
 @dlt.table(
