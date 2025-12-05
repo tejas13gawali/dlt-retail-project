@@ -121,9 +121,6 @@ df_top = (
 
 ---
 
-## 👨‍💻 Author
-
-**Tejas Gawali**  
-_Data Engineer | Azure | Databricks | PySpark_  
-Email: **tejas13gawali@gmail.com**
-
+## 👨‍💼 **Author**  
+ - [@Tejas Gawali]([https://www.github.com/octokatherine](https://github.com/tejas13gawali))
+Azure Data Engineer | Databricks | PySpark | Delta Lake | SQL  
