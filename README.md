@@ -14,20 +14,20 @@ This project demonstrates **incremental ingestion**, **data cleaning**, **data q
                       Auto Loader (cloudFiles)
                                 ▼
                       🟫 Bronze Layer
-                 - Incremental ingestion
-                 - Metadata columns
+                        - Incremental ingestion
+                        - Metadata columns
                                 │
                                 ▼
                       ⚪ Silver Layer
-                 - Data cleaning
-                 - Type casting
-                 - DLT expectations
+                        - Data cleaning
+                        - Type casting
+                        - DLT expectations
                                 │
                                 ▼
                       🟡 Gold Layer
-     ┌───────────────────────┬────────────────────────┬────────────────────────┐
-     ▼                       ▼                        ▼
-Daily Revenue     Monthly Revenue        Top Selling Products
+         ┌───────────────────────┬────────────────────────┐
+         ▼                       ▼                        ▼
+    Daily Revenue     Monthly Revenue        Top Selling Products
 ```
 
 ---
