@@ -36,11 +36,11 @@ Daily Revenue     Monthly Revenue        Top Selling Products
 
 ```
 dlt-retail-project/
-│── bronze/bronze_dlt.py
-│── silver/silver_dlt.py
-│── gold/gold_dlt.py
+│── source_code/retail_dlt.py
+|── datasets/sales_2024_01.csv
+|── datasets/sales_2024_02.csv
 │── config/00_config.json
-└── retail_dlt_pipeline
+└── README.md
 ```
 
 ---
