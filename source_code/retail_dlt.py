@@ -1,7 +1,19 @@
 import dlt
 from pyspark.sql.functions import *
 
-# config = spark.read.json("/Volumes/dlt_retail_catalog/config/config_param/00_config.json", multiLine=True).first().asDict()
+config = (
+    spark.read.json(
+        "/Volumes/dlt_retail_catalog/config/config_param/00_config.json",
+        multiLine=True,
+    )
+    .first()
+    .asDict()
+)
+
+SOURCE_PATH = config.get(
+    "source_path",
+    "/Volumes/dlt_retail_catalog/raw_schema/raw_vol/",
+)
 
 #-------------------------------------------------------------------------
 # Retail bronze
@@ -13,14 +25,12 @@ from pyspark.sql.functions import *
 )
 def retail_bronze():
 
-    # source_path =  config["source_path"]
-
     return (
         spark.readStream
             .format("cloudFiles")
             .option("cloudFiles.format", "csv")
             .option("header", "true")
-            .load("/Volumes/dlt_retail_catalog/raw_schema/raw_vol/")
+            .load(SOURCE_PATH)
             .withColumn("ingestion_timestamp", current_timestamp())
             .withColumn("input_file_name", col("_metadata.file_path"))  # <-- FIXED
     )
